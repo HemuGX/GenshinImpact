@@ -1,8 +1,5 @@
 .primogems-calculator-wrapper , .resin-calculator-wrapper{
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-self: center;
+    margin: 20vh 0 0 0;
  
 }
 
@@ -13,6 +10,7 @@
     right: 10px;
 }
 .calculator {
+
     position: relative;
     max-width: 500px;
     border-radius: 5px;
