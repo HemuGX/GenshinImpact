@@ -1,0 +1,136 @@
+.primogems-calculator-wrapper , .resin-calculator-wrapper{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-self: center;
+ 
+}
+
+.calculator-sticker {
+    height: 100px;
+    position: absolute;
+    top: -93px;
+    right: 10px;
+}
+.calculator {
+    position: relative;
+    max-width: 500px;
+    border-radius: 5px;
+    margin: 20px auto;
+    background-color: #333B49;
+    padding: 40px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.enddate {
+    display: block;
+    background-color: initial;
+    color: aliceblue;
+    border: 1px solid white;
+    padding: 0.375rem .75rem;
+    font-family: "Cairo";
+    height: 35px;
+    border-radius: 5px;
+    font-size: 15px;
+    /* font-size: inherit; */
+  }
+
+  .enddate:focus {
+    color:aliceblue;
+    background-color:#2D3441;
+    border-color:#80bdff;
+    outline:0;
+    box-shadow:0 0 0 .2rem rgba(0,123,255,.25)
+  }
+
+  ::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+  }
+
+
+.calculator-button button{
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    color: aliceblue;
+    background-color: #282e3a;
+    font-family: inherit;
+    width: 100%;
+    height: 35px;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* .calculator-button button:hover {
+    background-color: #29303b;
+} */
+
+.basic-inputs , .abyss-inputs , .dailies-inputs ,.calculator-button  {
+    margin-bottom: 20px;
+}
+
+#dailies-expended-content , #abyss-expended-content{
+  display: none;
+  animation: checkbox .5s;
+}
+
+@keyframes checkbox {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.selectAbyss {
+    height: 35px;
+    width: 100%;
+    background-color: #333B49;
+    color: aliceblue;
+    font-family: inherit;
+    padding: 0 10px;
+    border: 1px solid aliceblue;
+    border-radius: 5px;
+    font-size: 15px;
+    /* font-size: inherit; */
+}
+
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+
+.selectAbyss:focus {
+    color:aliceblue;background-color:#2F3643;border-color:#80bdff;outline:0;box-shadow:0 0 0 .2rem rgba(0,123,255,.25)
+}
+#calculation-result {
+  display: none;
+  text-align: center;
+}
+#output {
+  color: #ccb2ff;
+  font-size: 1.2rem;
+}
+
+#output2 {
+  color:#EB4747;
+  /* font-size: 1.2rem; */
+}
+.abyss_checkbox span {
+  opacity: 70%;
+}

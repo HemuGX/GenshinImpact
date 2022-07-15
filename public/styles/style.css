@@ -102,7 +102,11 @@ body {
     border-radius: 10px;
     margin: 5px 0;
 }
-.feature h2 , .feature p, .banner-wrapper h2 {
+.feature h2 ,.banner-wrapper h2{
+    opacity: 100%;
+}
+
+.feature p{
     opacity: 70%;
 }
 .feature-link-wrapper {
@@ -193,7 +197,7 @@ body {
 .banner-wrapper img{
 
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 10px;
     width: 100%;
 }
 
@@ -239,6 +243,13 @@ body {
     }
     .intro-texts p {
         font-size: .5rem;
+    }
+    .calculator {
+        max-width: 400px;
+    }
+
+    .events img {
+        width: 20%;
     }
     /* .link {
         font-size: .8rem;

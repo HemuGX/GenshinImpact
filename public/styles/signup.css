@@ -9,7 +9,7 @@
     padding: 5rem 2rem;
 }
 
-input[type=text] , input[type=password] {
+input[type=text] , input[type=password] ,input[type=number] {
     width: 100%;
     display: block;
     border-radius: 5px;
@@ -24,7 +24,7 @@ input[type=text] , input[type=password] {
     color: aliceblue;
     opacity: 1; /* Firefox */
   }
-input[type=text]:focus , input[type=password]:focus{
+input[type=text]:focus , input[type=password]:focus ,input[type=number]:focus{
     color:aliceblue;
   background-color:var(--xiao-color);
   border-color:#80bdff;
@@ -32,7 +32,7 @@ input[type=text]:focus , input[type=password]:focus{
   box-shadow:0 0 0 .2rem rgba(0,123,255,.25)
 }
 
-.signin-button {
+.signin-button{
     margin-top: 15px;
     text-decoration: none;
       color: aliceblue;

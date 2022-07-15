@@ -1,0 +1,65 @@
+<%- include("partials/header") -%>
+
+<div class="resin-calculator-wrapper">
+    <div class="container">
+        <div class="calculator">
+            <h2>How much time is needed to refill your resin?</h2>
+            <img class="calculator-sticker"
+                src="https://stickerly.pstatic.net/sticker_pack/zdwcvI4IVsgAKwl4V0Ro7Q/K8N0ZZ/34/30b1f8a8-39e7-4b7d-8012-48f4a3debf92.png"
+                alt="">
+                <div class="calculator-inputs-wrapper">
+                    <div class="basic-inputs">
+                    <label for="current-resin">Current Resin?</label>
+                    <input type="number" id="current-resin">
+                    <label for="target-resin">Target?</label>
+                    <input type="number" id="target-resin">
+                   
+
+                    </div>
+                    <div class="calculator-button">
+                        <button onclick="resinCalculate()" type="Submit">Check</button>
+                    </div>
+                    <div id="calculation-result">
+                        <h1 id="output">Hey</h1>
+                        <p id="output2">hey</p>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function resinCalculate() {
+        const currentResin = parseInt(document.getElementById("current-resin").value);
+        const targetResin = parseInt(document.getElementById("target-resin").value);
+        
+        const resinGap =parseInt(targetResin) - parseInt(currentResin) 
+        const minsRequired = parseInt(resinGap)*8
+
+        var hours = Math.floor(minsRequired / 60);          
+        var minutes = minsRequired % 60
+
+        console.log(minsRequired)
+        var add_minutes =  function (dt, minutes) {
+            let options = { weekday: 'long', hour: 'numeric', minute: 'numeric'};
+        return new Date(dt.getTime() + minutes*60000).toLocaleString('en-US', options);
+        
+         }
+        var fillInTime = add_minutes(new Date(), minsRequired).toString();
+        // var today = new Date ();
+        // var fillInTime = new Date ( today );
+        // fillInTime.setMinutes ( today.getMinutes() + minsRequired );
+
+        if (hours === 0 ) {
+            document.getElementById("output").innerText = "Time required to reach your target Resin is " + minutes + " Minutes."
+        } else {
+            document.getElementById("output").innerText = "Time required to reach your target Resin is " + hours + " hours and " + minutes + " Minutes." 
+        }
+
+        document.getElementById("output2").innerText ="Your will reach your target by "+ fillInTime
+        
+        document.getElementById("calculation-result").style.display = "block";
+    }
+</script>
+
+<%- include("partials/footer") -%>

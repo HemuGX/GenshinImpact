@@ -1,0 +1,25 @@
+.events-wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.events{
+    /* background-color: #333B49; */
+    padding: 50px;
+    text-align: center;
+    border-radius: 5px;
+}
+.events img {
+    width: 50%;
+}
+@media only screen and (max-width:850px) {
+    .events{
+        padding: 10px;
+    }
+    .events img {
+        width: 30%;
+    }
+}

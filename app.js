@@ -27,7 +27,7 @@ app.use(passport.session())
 
 // MONGOOSE
 
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://HemuGX:ohokaybro@cluster0.ahffzoc.mongodb.net/?retryWrites=true&w=majority")
 
 const userSchema = new mongoose.Schema({
     username: String,
@@ -286,8 +286,15 @@ app.get("/admin",(req,res) => {
 })
 
 app.get("/primogems",(req,res) => {
-    res.render("primogems")
+    res.render("primogems-calculator")
 })
+app.get("/resin",(req,res) => {
+  res.render("resin-calculator")
+})
+app.get("/events",(req,res) => {
+  res.render("events")
+})
+
 
 
 app.listen(process.env.PORT||3000,(req,res) => {
