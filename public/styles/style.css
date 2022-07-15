@@ -33,9 +33,9 @@ body {
     background-color: var(--background-color);
 }
 
-.container {
+/* .container {
     padding: 0 10px;
-}
+} */
 
 /* Home */
 .intro-image img{
@@ -126,7 +126,14 @@ body {
     width: 100%;
 }
 
-.feature-link i {
+.feature-link-2nd-icon {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    right: 3px;
+}
+
+.feature-link-1st-icon {
     position: absolute;
     left: 10px;
     top: 50%;
