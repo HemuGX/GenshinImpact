@@ -27,7 +27,7 @@ app.use(passport.session())
 
 // MONGOOSE
 
-mongoose.connect("mongodb+srv://HemuGX:ohokaybro@cluster0.ahffzoc.mongodb.net/?retryWrites=true&w=majority")
+mongoose.connect(process.env.MONGODB_URI)
 
 const userSchema = new mongoose.Schema({
     username: String,
